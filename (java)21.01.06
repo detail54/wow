@@ -1,6 +1,6 @@
 ---scanner
 
-import java.util.Scanner;   // ¸ÇÀ­ÁÙ¿¡ import ÀÛ¼º
+import java.util.Scanner;   // ë§¨ìœ—ì¤„ì— import ì‘ì„±
 
 public class A0106 {
 
@@ -9,30 +9,32 @@ public class A0106 {
 		Scanner sc= new Scanner(System.in);
 
 		
-		System.out.println("ÀÌ¸§: ");
+		System.out.println("ì´ë¦„: ");
 		String a = sc.next();
 		
-		System.out.println("³ªÀÌ: ");
+		System.out.println("ë‚˜ì´: ");
 		int b = sc.nextInt();
 		
-		System.out.println("Å°: ");
+		System.out.println("í‚¤: ");
 		double c = sc.nextDouble();
 		
-		System.out.printf("ÀÌ¸§: %s\n ³ªÀÌ: %d\n Å°: %.1f ",a,b,c);
+		System.out.printf("ì´ë¦„: %s\n ë‚˜ì´: %d\n í‚¤: %.1f ",a,b,c);
 		
-		ÀÌ¸§: 
-	Àü´ëÇö
-	³ªÀÌ: 
+		sc.close();  // ìŠ¤ìºë„ˆ ì‚¬ìš© ë§ˆì§€ë§‰ì— ë‹«ì•„ì¤Œ.
+		
+	ì´ë¦„: 
+	ì „ëŒ€í˜„
+	ë‚˜ì´: 
 	30
-	Å°: 
+	í‚¤: 
 	170
-	ÀÌ¸§: Àü´ëÇö 
-	³ªÀÌ: 30 
-	Å°: 170.0 
+	ì´ë¦„: ì „ëŒ€í˜„ 
+	ë‚˜ì´: 30 
+	í‚¤: 170.0 
 		
 
 
-String name=sc.next();			//String¸¸ next ´ÙÀ½ ¾øÀ½.
+String name=sc.next();			//Stringë§Œ next ë‹¤ìŒ ì—†ìŒ.
 
 int age=sc.nextInt();
 
@@ -42,9 +44,9 @@ boolean study=sc.nextBoolean();
 
 
 
---Á¶°Ç¹®
+--ì¡°ê±´ë¬¸
 
-if, switch µÎ°¡Áö.
+if, switch ë‘ê°€ì§€.
 
 
 
