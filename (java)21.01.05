@@ -1,0 +1,86 @@
+--출력
+
+%d : 정수
+%f : 실수 (소수점 6자리까지 자동출력. 소수점 지정 -> %.2f (반올림처리)
+%s : 문자열
+%c : 문자
+\n 줄바꿈 
+
+ex) 
+	"%s\n" , "sdsd\n"  , 10\n
+	System.out.printf("%d %f", 100, 2.14);
+	System.out.printf("%d/%d=%.1f", 100, 200, 0.5);
+	
+	System.out.printf("이름:%s,\n나이:%d,\n시력:%.1f,\n학점:%c", "전대현",30,0.2,'A');
+	이름:전대현,
+	나이:30,
+	시력:0.2,
+	학점:A
+	
+		System.out.printf("%d\n", 123);			
+		System.out.printf("%5d\n", 123);		// %d 사이에 숫자 넣으면 스페이스바 입력 수 의미. (5자리 확보 후 오른쪽 정렬. __123) + %-5d 입력시 5자리 확보 후 왼쪽 정렬
+		System.out.printf("%05d\n", 123);		// 5자리 확보 후 빈공간 0으로 채움
+	
+		123
+		  123
+		00123
+		
+		System.out.printf("%f\n", 123.45);		
+		System.out.printf("%7.1f\n", 123.45);		//7자리 확보 후 소수점 1자리까지 (오른쪽정렬)
+		System.out.printf("%7.3f\n", 123.45);		//7자리 확보 후 소수점 3자리까지 (오른쪽정렬)
+	
+		123.450000
+		  123.5
+		123.450
+		
+		
+--변수
+
+	int A
+(자료형) (변수)
+@자료형 -> 정수,실수,문자열
+
+정수 : int  (byte, short, int, long)
+실수 : double  (float, double) *float 은 뒤에 f 붙여야함. ex) float a = 123.45f;
+문자 : char
+문자열 : String 
+= : 대입연산자 (오른쪽 값을 왼쪽에 넣는다)
+
+
+--형변환
+
+		int a = (int)123.123f;		//실수를 정수로 전환해서 int값에 넣음. 소수점 삭제 값 앞에 (변환할 자료형값)입력
+		float b;
+		
+--아스키코드
+
+		char ch='a';
+		
+		char ch1=97;
+		==========		
+		a
+		a
+		
+		
+		char ch = 'a';
+
+		System.out.printf("%c\n", ch);
+		System.out.printf("%d\n", (int) ch);
+
+		char ch1 = (char)(ch + 1);
+
+		System.out.println(ch1);
+		
+		char ch2=90;
+		
+		System.out.println(ch2);
+		=======================
+		a
+		97
+		b
+		Z
+		
+		
+--boolean
+
+불형,,   참(1), 거짓(0)만 저장가능
