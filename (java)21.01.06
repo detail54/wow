@@ -1,0 +1,50 @@
+---scanner
+
+import java.util.Scanner;   // 맨윗줄에 import 작성
+
+public class A0106 {
+
+	public static void main(String[] args) {
+
+		Scanner sc= new Scanner(System.in);
+
+		
+		System.out.println("이름: ");
+		String a = sc.next();
+		
+		System.out.println("나이: ");
+		int b = sc.nextInt();
+		
+		System.out.println("키: ");
+		double c = sc.nextDouble();
+		
+		System.out.printf("이름: %s\n 나이: %d\n 키: %.1f ",a,b,c);
+		
+		이름: 
+	전대현
+	나이: 
+	30
+	키: 
+	170
+	이름: 전대현 
+	나이: 30 
+	키: 170.0 
+		
+
+
+String name=sc.next();			//String만 next 다음 없음.
+
+int age=sc.nextInt();
+
+double weight=sc.nextDouble();
+
+boolean study=sc.nextBoolean();
+
+
+
+--조건문
+
+if, switch 두가지.
+
+
+
