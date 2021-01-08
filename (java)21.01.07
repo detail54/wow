@@ -1,0 +1,94 @@
+-- if
+
+문자열 비교는 .equals();
+
+200보다
+작다
+
+--삼항조건 연산자
+
+		int score = 85;
+		char grade=(score>90)?'A':'B';
+		
+		System.out.println(grade);
+		
+		조건식이 참이면 ?뒤가 실행. 
+			  거짓이면 :뒤가 실행.
+			  
+		ex)
+		Scanner s = new Scanner(System.in);
+
+		System.out.println("점수, 학년입력: ");
+		int score = s.nextInt();
+		int grade = s.nextInt();
+
+		char cho = (grade == 4) ? 'A' : 'B';
+
+		if (cho == 'A') {
+			if (score >= 80) {
+				System.out.println("합격");
+			} else {
+				System.out.println("불합격");
+			}
+		} else {
+			if (score >= 70) {
+				System.out.println("합격");
+			} else {
+				System.out.println("불합격");
+			}
+		}	  
+			  
+			  
+
+--switch
+
+switch의 조건 값(상수값)에 따라 case를 실행.
+			(상수 : 문자, 문자열, 정수)
+
+char a = s.next().charAt(0); // char 스캐너 값 받아오는 법.
+++++ charAt(0); 에서 0은 몇번째 글자 불러올건지 선택. 0, 1, 2 .....
+
+
+---반복문
+
+for, while, do~while  3가지
+
+for문 많이씀.
+
+
+** Math.random()
+
+0.0 *10 <= Math.radom *10< 1.0 *10
+
+0.0 <= Math.random *10 <10.0
+
+(int)0.0 <= (int)Math.random *10 <(int)10.0
+
+0 < 0~9 <10
+
+=============== int n = (int)(Math.random()*6)+1;
+=============== 0 < 1~6 < 7  따라서  (int)(Math.ranom()) 의 범위는 1~6
+=============== A ~ 값 ~ B  범위를 정할때 곱하거나 더하면 A,값,B 모두 똑같이 계산해줘야함
+
+ex) 랜덤 추출할수 있는 값 중복없이 전부 출력
+		
+		int[] num = new int[10];					//정수 10개를 배열에 담는다.
+
+		for (int ii = 0; ii < num.length; ii++) {	//ii가 num 배열 수 보다 커질때까지 반복
+			num[ii] = (int) (Math.random() * 10);	//ex) num[ii] 에 0~9까지 랜덤 정수 대입 => ex) num[ii]에 [2]가 대입. ii++ 이므로 아직 ii=0 인 상태
+													//새로운 for 문을 만들어(num[no] = 0) num[ii]와 비교함. = 0 은 해당 위치 숫자를 불러와 비교함.
+			for (int no = 0; no < ii; no++) {		//두번째 for 문에서 ii=0 no=0 , ii = no인 상태이므로 if문 실행 안됌. 같은 num 사용하므로 num[no] 배열에도 [2] 추가.
+				if (num[ii] == num[no]) {			//반복문 재실행. ii++로 인해 지금 num[ii] = 1로 되어 실행. 두번쨰 배열에도 2가나왔다면 num[ii]=[2,2]. 
+					ii--;							//두번째 반복문에서 [no]=0, [ii]=1 no<ii 성립되어 if문 실행. num[ii] = [2,2<] , num[no] = [2<]
+					break;							//num[ii]=1 이라 2번째 배열 불러오고 num[no]=0 이라 첫번째 배열 불러와서 비교. 둘다 2로 같음.
+				}									//ii 2번째 배열과 no 1번째 배열이 같으므로 ii--를 하여 최근 실행 초기화 하고 첫번째 반복문 재실행. 더이상 중복없으면 break로 반복문 빠져나옴.
+			}
+		}
+
+		for (int i = 0; i < num.length; i++) {		//배열에 담긴 num.length(num에 담긴 배열수만큼) 반복출력.
+			System.out.println(num[i]);
+		}
+
+
+
+
