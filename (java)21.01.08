@@ -1,0 +1,94 @@
+--for문 중첩
+
+ex) * 한개씩 증가
+		for (int i = 0; i < 5; i++) {
+			for (int k = 0; k < i + 1; k++) {
+				System.out.print("*");
+			}
+
+			System.out.println();
+		}
+		
+		*
+		**
+		***
+		****
+		*****
+		
+ex2) 오른쪽정렬? 공백?
+
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 4 - i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 0; j < i + 1; j++) {
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+		    *
+		   **
+		  ***
+		 ****
+		*****
+		
+ex3) 마름모꼴
+		for (int i = 0; i < 9; i++) {
+			if (i < 5) {
+				for (int j = 0; j < 4 - i; j++) {
+					System.out.print(" ");
+				}
+				for (int j = 0; j < i + 1; j++) {
+					System.out.print("*");
+				}
+			} else {
+				for (int j = 0; j < i - 4; j++) {
+					System.out.print(" ");
+				}
+				for (int j = 0; j < 9 - i; j++) {
+					System.out.print("*");
+				}
+			}
+			System.out.println();
+		}
+		
+		    *
+		   **
+		  ***
+		 ****
+		*****
+		 ****
+		  ***
+		   **
+		    *
+		    
+		 
+ex3) 	for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 4 - i; j++) {
+				System.out.print(" ");
+			}
+			int n = 1;
+			for (int j = 0; j < (i * 2) + 1; j++) {
+				System.out.print(n++);
+			}
+			System.out.println();
+		}   
+		
+		
+	1
+   123
+  12345
+ 1234567
+123456789
+
+
+---for문 조건 생략가능
+
+int i = 0;
+
+1) for(;i<10;i++)
+2) for(;i<10;){
+	i++;
+   }
+   
+3) for(;;)  ==> 무한루프.  무한루프 사용시, if문을 중첩하여 break; 사용하면 탈출가능.
