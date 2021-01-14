@@ -1,0 +1,96 @@
+---String 메서드
+
+	//String _c_ = _a_.concat("B");   
+	
+	스트링 변수 c는 스트링변수 a 에 B 내용을 붙인다.
+	
+	ex)
+		String str = "오늘은 수요일";
+		String str1 = str.concat("내일은 목요일");
+		
+		System.out.println(str1);
+		
+		== 오늘은 수요일내일은 목요일
+		
+		
+	// length() 함수로 문자열 길이 비교
+		
+	ex)
+		String a = sc.next();
+		String b = sc.next();
+		
+		if(a.length() < b.length()) {
+			System.out.println(b);
+		} else {
+			System.out.println(a);
+		}
+		
+		=== a : apple
+		    b : strawberry
+		    
+		    (b) - strawberry
+		    
+	//replace("_a_" , "_b_");  - 문자 바꿈
+	
+	ex)	
+		String a = "오늘은 수요일, 공부하고 티비봄!!";
+		
+		String b = a.replace("오늘은","today is");
+		System.out.println(b);
+		
+		== today is 수요일, 공부하고 티비봄!!
+		
+	//substring(_a_ , _b_); - 문자열 중 a자리부터 b 번째 자리까지 출력. 
+	
+	ex)
+		String a = "오늘은수요일, 공부하고 티비봄!!";
+		
+		String b = a.substring(0,4);
+		System.out.println(b);
+		
+		== 오늘은수
+
+	//split("_a_"); - a를 기준으로 앞 뒤값 나누어 배열에 넣음.
+	
+	ex)
+		String a = "오늘은 수요일, 공부하고 티비봄!!";
+
+		String[] b = a.split(",");
+
+		for (String i : b) {
+			System.out.println(i);
+		}
+	
+		==  오늘은 수요일
+ 			 공부하고 티비봄!!
+ 			 
+ 	//_a_.compareTO(_b_); - a와 b를 아스키코드로 변환해서 숫자로 a-b를 진행. 문자가 같을경우 0 출력, 다를경우 a-b값 출력.
+ 		
+ 	ex)	
+ 		String a = "apple";
+		String b = "banana";
+
+		if (a.compareTo(b) > 0) {
+			System.out.println(a);
+		}
+		
+		
+		== a와 b 비교. a=97, b=98 . a-b = -1 , a<0 이므로 값 출력안됌. b.compareTO(a)로 바꾸면 98-97 되어 1. (a)1>0 이므로 apple 출력.
+	
+		
+	// _a_.trim();  -  문자열의 맨앞과 맨끝 공백 제거.
+	
+	ex)
+		String a = "   오늘은 수요일,     공부하고 티비봄!!   ";
+		
+		String b = a.trim();
+		
+		System.out.println(b);	
+		
+		== 오늘은 수요일,     공부하고 티비봄!!      >>> 중간 공백은 제거 안됌.
+		
+	ex) 중간 공백 제거 예.
+	
+		
+		
+		
