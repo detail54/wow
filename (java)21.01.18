@@ -1,66 +1,101 @@
 
 
-throws Exception -> Exception Å¬·¡½º·Î ¿¹¿Ü¸¦ ´øÁø´Ù,(Ã³¸®ÇÏ°Ú´Ù)
+throws Exception -> Exception í´ë˜ìŠ¤ë¡œ ì˜ˆì™¸ë¥¼ ë˜ì§„ë‹¤,(ì²˜ë¦¬í•˜ê² ë‹¤)
 
-****¿¹¿ÜÃ³¸® ÇÊ¼ö****
-À§¿¡Ã³·³ throws Exception À» »ç¿ëÇØµµ µÇÁö¸¸ try ~ catch ·Î ÀÛ¼ºÇØµµ ‰Î.
+****ì˜ˆì™¸ì²˜ë¦¬ í•„ìˆ˜****
+ìœ„ì—ì²˜ëŸ¼ throws Exception ì„ ì‚¬ìš©í•´ë„ ë˜ì§€ë§Œ try ~ catch ë¡œ ì‘ì„±í•´ë„ ëŒ.
 
-***String Å¸ÀÔÀ¸·Î ¸®ÅÏµÈ´Ù..
+***String íƒ€ì…ìœ¼ë¡œ ë¦¬í„´ëœë‹¤..
 
-FileInputStream - > ÆÄÀÏÀ» ¹ÙÀÌÆ® ´ÜÀ§·Î ÀĞ¾î¿È.
-FileOutputStream - > ÆÄÀÏÀ» ¹ÙÀÌÆ® ´ÜÀ§·Î »ı¼º.
-BufferdReader - > ¹®ÀÚ¸¦ ÇÑ±ÛÀÚ¾¿ ¹öÆÛ¿¡ ÀúÀåÇÏ¿© ÇÑ¹ø¿¡ ºÒ·¯¿È
-BufferdWriter -> ¹®ÀÚ¸¦ ÇÑ±ÛÀÚ¾¿ ¹öÆÛ¿¡ ÀúÀåÇÏ¿© ÇÑ¹ø¿¡ Ãâ·Â. »ı¼º
+FileInputStream - > íŒŒì¼ì„ ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ ì½ì–´ì˜´.
+FileOutputStream - > íŒŒì¼ì„ ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ ìƒì„±.
+BufferdReader - > ë¬¸ìë¥¼ í•œê¸€ìì”© ë²„í¼ì— ì €ì¥í•˜ì—¬ í•œë²ˆì— ë¶ˆëŸ¬ì˜´
+BufferdWriter -> ë¬¸ìë¥¼ í•œê¸€ìì”© ë²„í¼ì— ì €ì¥í•˜ì—¬ í•œë²ˆì— ì¶œë ¥. ìƒì„±
 
-FileReader - > ÆÄÀÏÀ» ¹®ÀÚ¿­ ÇüÅÂ·Î ÀĞ¾î¿È.
-FIleWriter - > ÆÄÀÏÀ» ¹®ÀÚ¿­ ÇüÅÂ·Î »ı¼º.
+FileReader - > íŒŒì¼ì„ ë¬¸ìì—´ í˜•íƒœë¡œ ì½ì–´ì˜´.
+FIleWriter - > íŒŒì¼ì„ ë¬¸ìì—´ í˜•íƒœë¡œ ìƒì„±.
 
 ***InputStreamReader - >  
 
 		BufferedReader in
    					= new BufferedReader(new InputStreamReader(System.in));
 
-ex) ÆÄÀÏ »ı¼ºÇÏ¿© ÅØ½ºÆ® ÀÔ·Â
+ex) íŒŒì¼ ìƒì„±í•˜ì—¬ í…ìŠ¤íŠ¸ ì…ë ¥
 
 	public static void main(String[] args) throws IOException {
 		
-		FileWriter fw = new FileWriter("b.txt");	//ÀÚ½Ä Å¬·¡½ºÀÎ BufferedWriter ¶§¹®¿¡ ±× ºÎ¸ğ Å¬·¡½ºÀÎ FileWriter·Î ¸ÕÀú ¼±¾ğÇØ¼­ ²ø¾î¿Í¾ßÇÔ.(¸Ş¼Òµå, Å¬·¡½º·Î ¸ÕÀú »ı¼ºµµ°¡´É)
-		BufferedWriter out = new BufferedWriter(fw);	//ÀÌ¿ëÇÏ¿© »ı¼ºÇÑ ÆÄÀÏ¿¡ ¹®ÀÚ ÀÛ¼º. Å°º¸µå·Î ÀÔ·ÂÇÑ ¹®ÀÚ ÇÑ±ÛÀÚ ÇÑ±ÛÀÚ¸¦ ¹öÆÛ·Î ÀÌµ¿½ÃÄÑ ÇÑ¹ø¿¡ Àü¼Û.
-														//¹®ÀÚ¸¦ ¹Ù·Î¹Ù·Î Àü¼ÛÇÏ´Â°Íº¸´Ù ÇÑµ¥ ¸ğ¾Æ¼­ ÇÑ¹ø¿¡ Àü¼Û ÇÏ´Â°Ô ´õ È¿À²Àû.
+		FileWriter fw = new FileWriter("b.txt");	//ìì‹ í´ë˜ìŠ¤ì¸ BufferedWriter ë•Œë¬¸ì— ê·¸ ë¶€ëª¨ í´ë˜ìŠ¤ì¸ FileWriterë¡œ ë¨¼ì € ì„ ì–¸í•´ì„œ ëŒì–´ì™€ì•¼í•¨.(ë©”ì†Œë“œ, í´ë˜ìŠ¤ë¡œ ë¨¼ì € ìƒì„±ë„ê°€ëŠ¥)
+		BufferedWriter out = new BufferedWriter(fw);	//ì´ìš©í•˜ì—¬ ìƒì„±í•œ íŒŒì¼ì— ë¬¸ì ì‘ì„±. í‚¤ë³´ë“œë¡œ ì…ë ¥í•œ ë¬¸ì í•œê¸€ì í•œê¸€ìë¥¼ ë²„í¼ë¡œ ì´ë™ì‹œì¼œ í•œë²ˆì— ì „ì†¡.
+														//ë¬¸ìë¥¼ ë°”ë¡œë°”ë¡œ ì „ì†¡í•˜ëŠ”ê²ƒë³´ë‹¤ í•œë° ëª¨ì•„ì„œ í•œë²ˆì— ì „ì†¡ í•˜ëŠ”ê²Œ ë” íš¨ìœ¨ì .
 		
-		out.write("¾È³ç");
-		out.newLine();			//»õ·Î¿îÁÙ. ¿£ÅÍ¿ªÇÒ
-		out.write("¿À´ÃÀº ¿ù¿äÀÏ");	
+		out.write("ì•ˆë…•");
+		out.newLine();			//ìƒˆë¡œìš´ì¤„. ì—”í„°ì—­í• 
+		out.write("ì˜¤ëŠ˜ì€ ì›”ìš”ì¼");	
 		out.newLine();
 		out.write("aaa@naver.com");
-		out.flush(); 		//¹öÆÛ¸¦ ÀÌ¿ëÇÏ¿© µ¥ÀÌÅÍ¸¦ Ã³¸®ÇÏ´Â°Å±â ¶§¹®¿¡ flush¸¦ ÀÌ¿ëÇÏ¿© ¹öÆÛ¿¡ ³²¾ÆÀÖ´Â µ¥ÀÌÅÍ¸¦ ¸ğµÎ Ãâ·ÂÇÏ¿© Å¬¸°ÇÏ°Ô ÇÔ. 
+		out.flush(); 		//ë²„í¼ë¥¼ ì´ìš©í•˜ì—¬ ë°ì´í„°ë¥¼ ì²˜ë¦¬í•˜ëŠ”ê±°ê¸° ë•Œë¬¸ì— flushë¥¼ ì´ìš©í•˜ì—¬ ë²„í¼ì— ë‚¨ì•„ìˆëŠ” ë°ì´í„°ë¥¼ ëª¨ë‘ ì¶œë ¥í•˜ì—¬ í´ë¦°í•˜ê²Œ í•¨. 
 		out.close();
 		
 	}
 	
 	
-ex) ÆÄÀÏ »ı¼ºÇÏ¿© ³»¿ë ÀÛ¼ºÇØ³õÀº ÆÄÀÏ ºÒ·¯¿À±â
+ex) íŒŒì¼ ìƒì„±í•˜ì—¬ ë‚´ìš© ì‘ì„±í•´ë†“ì€ íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°
 
 	public static void main(String[] args) throws IOException {
 		
 		FileReader sw = new FileReader("b.txt");
 		BufferedReader in = new BufferedReader(sw);
 		
-		String str;					//¹®ÀÚ¿­ ¼±¾ğ
+		String str;					//ë¬¸ìì—´ ì„ ì–¸
 		
-		while(true) {				//¹«ÇÑ·çÇÁ ÀÌ¿ëÇÏ¿© ÅØ½ºÆ®ÆÄÀÏ ³» ±ÛÀÚ ÇÑ±ÛÀÚÇÑ±ÛÀÚ ¹İº¹ÇÏ¿© ºÒ·¯¿È,, ¹«ÇÑ·çÇÁ ¸»°íµµ while(Á¶°Ç¹®) Á¶°Ç¹® ¿©·¯°¡Áö·Î ÀÌ¿ë °¡´É. 
-			str = in.readLine();	//¼±¾ğÇÑ ¹®ÀÚ¿­À» ÇÑÁÙÇÑÁÙ ºÒ·¯¿Â´Ù.
-			if(str==null) {			//ºÒ·¯¿Ã ³»¿ëÀÌ ¾øÀ¸¸é break·Î ¸ØÃã
+		while(true) {				//ë¬´í•œë£¨í”„ ì´ìš©í•˜ì—¬ í…ìŠ¤íŠ¸íŒŒì¼ ë‚´ ê¸€ì í•œê¸€ìí•œê¸€ì ë°˜ë³µí•˜ì—¬ ë¶ˆëŸ¬ì˜´,, ë¬´í•œë£¨í”„ ë§ê³ ë„ while(ì¡°ê±´ë¬¸) ì¡°ê±´ë¬¸ ì—¬ëŸ¬ê°€ì§€ë¡œ ì´ìš© ê°€ëŠ¥. 
+			str = in.readLine();	//ì„ ì–¸í•œ ë¬¸ìì—´ì„ í•œì¤„í•œì¤„ ë¶ˆëŸ¬ì˜¨ë‹¤.
+			if(str==null) {			//ë¶ˆëŸ¬ì˜¬ ë‚´ìš©ì´ ì—†ìœ¼ë©´ breakë¡œ ë©ˆì¶¤
 				break; 
 			}
 			System.out.println(str);
 		}
-		in.close();				//close ÇÊ¼ö
+		in.close();				//close í•„ìˆ˜
 
 	}
 	
+
+ex) FileInputStream ì´ìš©í•˜ì—¬ íŒŒì¼ë‚´ìš© ë¶ˆëŸ¬ì˜¤ê¸°.
+
+													~~Stream  =  String = null;
+													~~reader  =  int -1;  		ì£¼ë¡œ ì´ìš©í•¨.
+
+package soldesk;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class AA {
+
+	public static void main(String[] args) throws IOException {
+
+		FileInputStream fi = new FileInputStream("c.txt");
+			
+			byte[] b = new byte[1024];
+			
+			int i = 0;
+			int ch = -1;
+			
+			while ((i = fi.read()) != -1) {
+				b[i] = (byte)ch;
+				i++;
+			}
+			
+				System.out.println(new String(b));
+			
+		fi.close();
+
+	}
+
+}	
 	
-ex) ÄÜ¼Ö¿¡¼­ ÀÔ·ÂÇÑ ³»¿ëÀ» ÅØ½ºÆ®ÆÄÀÏ »ı¼ºÇÏ¿© Ãâ·Â
+	
+ex) ì½˜ì†”ì—ì„œ ì…ë ¥í•œ ë‚´ìš©ì„ í…ìŠ¤íŠ¸íŒŒì¼ ìƒì„±í•˜ì—¬ ì¶œë ¥
 	
 	public static void main(String[] args) {
 
@@ -68,16 +103,16 @@ ex) ÄÜ¼Ö¿¡¼­ ÀÔ·ÂÇÑ ³»¿ëÀ» ÅØ½ºÆ®ÆÄÀÏ »ı¼ºÇÏ¿© Ãâ·Â
 		PrintWriter pr = null;
 		
 		try {
-			InputStreamReader in = new InputStreamReader(System.in);		//ÄÜ¼Ö¿¡ ÀÔ·Â.
+			InputStreamReader in = new InputStreamReader(System.in);		//ì½˜ì†”ì— ì…ë ¥.
 		
 			bu = new BufferedReader(in);	//BufferedReader _a_
-											//				= new BufferedReader(new InputStreamReader(System.in));		 ÀÌ·¸°Ô ÇÑÁÙ·Îµµ ÀÛ¼º°¡´É.
-											//ÄÜ¼Ö¿¡ ¹®ÀÚ¸¦ ÀÔ·ÂÇÏ´Â°Í ±îÁö ÄÚµå..
-			FileWriter fw = new FileWriter("d.txt");		//ÀÔ·ÂÇÑ ³»¿ëÀ» ÅØ½ºÆ® ÆÄÀÏ¿¡ ÀúÀå.
+											//				= new BufferedReader(new InputStreamReader(System.in));		 ì´ë ‡ê²Œ í•œì¤„ë¡œë„ ì‘ì„±ê°€ëŠ¥.
+											//ì½˜ì†”ì— ë¬¸ìë¥¼ ì…ë ¥í•˜ëŠ”ê²ƒ ê¹Œì§€ ì½”ë“œ..
+			FileWriter fw = new FileWriter("d.txt");		//ì…ë ¥í•œ ë‚´ìš©ì„ í…ìŠ¤íŠ¸ íŒŒì¼ì— ì €ì¥.
 			pr = new PrintWriter(fw);
 			
 			String str = null;
-											//ÆÄÀÏ »ı¼ºÀÌ ºÒÇÊ¿ä. ÀÌ¹Ì ÀÛ¼ºÇÏ¿© ÆÄÀÏÀ» ¸¸µç »óÅÂ¿¡¼­ ºÒ·¯¿À´Â°Å±â¶§¹®µ¥ FileReader »ı¼º¾ÈÇÔ.
+											//íŒŒì¼ ìƒì„±ì´ ë¶ˆí•„ìš”. ì´ë¯¸ ì‘ì„±í•˜ì—¬ íŒŒì¼ì„ ë§Œë“  ìƒíƒœì—ì„œ ë¶ˆëŸ¬ì˜¤ëŠ”ê±°ê¸°ë•Œë¬¸ë° FileReader ìƒì„±ì•ˆí•¨.
 			while ((str = bu.readLine())!=null) {
 				pr.println(str);
 			}
@@ -90,7 +125,7 @@ ex) ÄÜ¼Ö¿¡¼­ ÀÔ·ÂÇÑ ³»¿ëÀ» ÅØ½ºÆ®ÆÄÀÏ »ı¼ºÇÏ¿© Ãâ·Â
 		}
 	}
 	
-	ex2)) À§¿¡²¨¿Í °°ÀºÄÚµå. ¹öÆÛ¸®´õ¿Í ÀÎÇ²½ºÆ®¸²¸®´õ µû·Îµû·Î »ı¼º¾ÈÇÏ°í ÇÑÁÙ·Î »ı¼º.
+	ex2)) ìœ„ì—êº¼ì™€ ê°™ì€ì½”ë“œ. ë²„í¼ë¦¬ë”ì™€ ì¸í’‹ìŠ¤íŠ¸ë¦¼ë¦¬ë” ë”°ë¡œë”°ë¡œ ìƒì„±ì•ˆí•˜ê³  í•œì¤„ë¡œ ìƒì„±.
 				//BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	
 		public static void main(String[] args) {
@@ -100,12 +135,12 @@ ex) ÄÜ¼Ö¿¡¼­ ÀÔ·ÂÇÑ ³»¿ëÀ» ÅØ½ºÆ®ÆÄÀÏ »ı¼ºÇÏ¿© Ãâ·Â
 		
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-											//ÄÜ¼Ö¿¡ ¹®ÀÚ¸¦ ÀÔ·ÂÇÏ´Â°Í ±îÁö ÄÚµå..
-			FileWriter fw = new FileWriter("d.txt");		//ÀÔ·ÂÇÑ ³»¿ëÀ» ÅØ½ºÆ® ÆÄÀÏ¿¡ ÀúÀå.
+											//ì½˜ì†”ì— ë¬¸ìë¥¼ ì…ë ¥í•˜ëŠ”ê²ƒ ê¹Œì§€ ì½”ë“œ..
+			FileWriter fw = new FileWriter("d.txt");		//ì…ë ¥í•œ ë‚´ìš©ì„ í…ìŠ¤íŠ¸ íŒŒì¼ì— ì €ì¥.
 			pr = new PrintWriter(fw);
 			
 			String str = null;
-											//ÆÄÀÏ »ı¼ºÀÌ ºÒÇÊ¿ä. ÀÌ¹Ì ÀÛ¼ºÇÏ¿© ÆÄÀÏÀ» ¸¸µç »óÅÂ¿¡¼­ ºÒ·¯¿À´Â°Å±â¶§¹®µ¥ FileReader »ı¼º¾ÈÇÔ.
+											//íŒŒì¼ ìƒì„±ì´ ë¶ˆí•„ìš”. ì´ë¯¸ ì‘ì„±í•˜ì—¬ íŒŒì¼ì„ ë§Œë“  ìƒíƒœì—ì„œ ë¶ˆëŸ¬ì˜¤ëŠ”ê±°ê¸°ë•Œë¬¸ë° FileReader ìƒì„±ì•ˆí•¨.
 			while ((str = in.readLine())!=null) {
 				pr.println(str);
 			}
@@ -123,14 +158,14 @@ ex) ÄÜ¼Ö¿¡¼­ ÀÔ·ÂÇÑ ³»¿ëÀ» ÅØ½ºÆ®ÆÄÀÏ »ı¼ºÇÏ¿© Ãâ·Â
 
 		while (true) {
 			try {
-				System.out.println("Á¤¼ö 2°³ ÀÔ·Â: ");
+				System.out.println("ì •ìˆ˜ 2ê°œ ì…ë ¥: ");
 				int in = sc.nextInt();
 				int in2 = sc.nextInt();
 				
 				System.out.println(in+in2);
 				
 			} catch (Exception e) {
-				System.out.println("´Ù½Ã ÀÔ·Â");
+				System.out.println("ë‹¤ì‹œ ì…ë ¥");
 				sc.nextLine();
 				continue;
 			}
